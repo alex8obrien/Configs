@@ -1,0 +1,58 @@
+{
+    "arduino.useArduinoCli": true,
+    "arduino.path": "C:\\Program Files\\Arduino",
+    "discord.detailsIdling": "Idling",
+    "discord.largeImageIdling": "Idling",
+    "discord.lowerDetailsIdling": "Idling",
+    "discord.suppressNotifications": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+    "git.enableCommitSigning": true,
+    "github.gitProtocol": "ssh",
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "latex": false
+    },
+    "githubPullRequests.createOnPublishBranch": "never",
+    "editor.inlineSuggest.enabled": true,
+    "editor.accessibilitySupport": "off",
+    "editor.wordWrap": "off",
+    "explorer.confirmDelete": false,
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "terminal.integrated.cursorStyle": "line",
+        "todohighlight.include": [
+        "**/*.cs",
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss"
+    ],
+    "todohighlight.defaultStyle": {
+        "color": "#2AAFD4",
+        "backgroundColor": "editor.background",
+        "overviewRulerColor": "editor.background",
+        "isWholeLine": false
+    },
+    "todohighlight.keywordsPattern": "(?<=\\W|^)(?<TAG>BUG:|TODO:|FIX:|NOTE:|HACK:)(\\W|$)(.*)",
+    "workbench.editorAssociations": {
+        "*.pdf": "pdf.preview"
+    },    
+    "workbench.colorTheme": "Default Dark+",
+}
