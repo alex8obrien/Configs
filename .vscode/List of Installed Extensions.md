@@ -1,0 +1,35 @@
+# Extensions
+
+- Arduino
+- C/C++
+- C/C++ Extension Pack
+- C/C++ Themes
+- C#
+- CMake
+- CMake Tools
+- Data Workspace
+- Discord Presence
+- Excel Viewer
+- GitHub Copilot
+- GitHub Markdown Preview
+- GitHub Pull Requests and Issues
+- GitHub Repositories
+- Isort
+- Markdown Checkboxes
+- Markdown Emoji
+- Markdown Footnotes
+- Markdown Preview GitHub Styling
+- Markdown Preview Mermaid Support
+- Markdown YAML Preamble
+- Markdownlint
+- MDX
+- Pylance
+- Python
+- Remote Repositories
+- Serial Monitor
+- Spell Right
+- SQL Bindings
+- SQL Database Projects
+- Text Tables
+- TODO Highlight
+- VSCode-PDF
