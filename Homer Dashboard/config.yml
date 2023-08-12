@@ -1,0 +1,105 @@
+title: "App Dashboard"
+subtitle: "Homer"
+documentTitle: "Dashboard" # Tab title
+logo: "logo.png"
+
+header: true
+footer: '<p>Created by Alex O'Brien</p>'
+
+# Maybe 4: networking
+columns: 3 # Servers, Services, Media,
+
+connectivityCheck: true
+
+proxy:
+  useCredentials: false
+
+# Default colour & layout
+defaults:
+  layout: columns
+  colorTheme: dark
+theme: default
+
+colors:
+  light:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#f5f5f5"
+    card-background: "#ffffff"
+    text: "#363636"
+    text-header: "#424242"
+    text-title: "#303030"
+    text-subtitle: "#424242"
+    card-shadow: rgba(0, 0, 0, 0.1)
+    link: "#3273dc"
+    link-hover: "#363636"
+    # TEST: This is a test to see if I can add a background image
+    background-image: "logo.png"
+  dark:
+    highlight-primary: "#3367d6"
+    highlight-secondary: "#4285f4"
+    highlight-hover: "#5a95f5"
+    background: "#131313"
+    card-background: "#2b2b2b"
+    text: "#eaeaea"
+    text-header: "#ffffff"
+    text-title: "#fafafa"
+    text-subtitle: "#f5f5f5"
+    card-shadow: rgba(0, 0, 0, 0.4)
+    link: "#3273dc"
+    link-hover: "#ffdd57"
+    background-image: "assets/your/dark/bg.png"
+
+message:
+  # NOTE: The following 2 may be incorrect
+  title: "Welcome to Homer!"
+  content: "This is a dashboard for your favourite web services."
+
+  style: "is-info"
+  icon: "logo.png"
+
+links:
+  - name: "YouTube"
+    icon: "fab fa-youtube"
+    url: "https://youtube.co.uk"
+    target: "_blank"
+  - name: "GitHub"
+    icon: "fab fa-github"
+    url: "https://github.com/alex8obrien"
+    target: "_blank"
+
+services:
+  - name: "Servers"
+    logo: "fas fa-server"
+    items:
+      - name: "WEB TEST"
+        icon: "fas fa-browser"
+        url: "http://www.alex8obrien.com"
+        target: "_blank"
+      - name: "TrueNAS"
+        icon: "fas fa-server"
+        url: "http://nas.local"
+        target: "_blank"
+  - name: "Services"
+    logo: "fal gears"
+    items:
+      - name: "Uptime Kuma"
+        logo: "icons/uptime-kuma.png"
+        url: "http://uptime.local"
+        target: "_blank"
+      - name: "Pi-hole"
+        logo: "icons/pihole.png"
+        url: "http://pihole.local"
+        target: "_blank"
+  - name: "Media"
+    logo: "fas fa-film"
+      items:
+        - name: "Jellyfin"
+        logo: "icons/jellyfin.png"
+        url: "http://jellyfin.local"
+        target: "_blank"
+        - name: "Sonarr"
+        logo: "icons/sonarr.png"
+        url: "http://sonarr.local"
+        target: "_blank"
