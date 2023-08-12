@@ -9,3 +9,7 @@ All are free to use and if you have any suggestions please create an issue reque
 
 - [Settings](.vscode/settings.json)
 - [List of Installed Extensions](.vscode/List%20of%20Installed%20Extensions.md)
+
+### Homer Dashboard
+
+- [Config](/Homer%20Dashboard/config.yml)
