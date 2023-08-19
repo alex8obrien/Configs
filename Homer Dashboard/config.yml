@@ -1,7 +1,7 @@
 title: "App Dashboard"
 subtitle: "Alex's"
 documentTitle: "Dashboard" # Tab title
-logo: "assets/logo.png"
+logo: "assets/icons/logo.png"
 
 header: true
 footer: "<p>Customised by <a href="https://github.com/alex8obrien">Alex O'Brien</a></p>"
@@ -80,7 +80,7 @@ services:
         logo: "assets/icons/truenas.png"
         url: "http://nas.alex8obrien.com"
       - name: "Nginx"
-        logo: "assets/icons/nginx.png"
+        logo: "assets/icons/nginxproxymanager.png"
         url: "https://nginx.alex8obrien.com"
       - name: "Pi-hole"
         logo: "assets/icons/pihole.png"
