@@ -1,13 +1,13 @@
 title: "App Dashboard"
-subtitle: "Homer"
+subtitle: "Alex's"
 documentTitle: "Dashboard" # Tab title
-logo: "logo.png"
+logo: "assets/logo.png"
 
 header: true
-footer: '<p>Created by Alex O'Brien</p>'
+footer: "<p>Customised by <a href="https://github.com/alex8obrien">Alex O'Brien</a></p>"
 
 # Maybe 4: networking
-columns: 3 # Servers, Services, Media,
+columns: 3 # Networking, Services, Media,
 
 connectivityCheck: true
 
@@ -34,8 +34,6 @@ colors:
     card-shadow: rgba(0, 0, 0, 0.1)
     link: "#3273dc"
     link-hover: "#363636"
-    # TEST: This is a test to see if I can add a background image
-    background-image: "logo.png"
   dark:
     highlight-primary: "#3367d6"
     highlight-secondary: "#4285f4"
@@ -52,54 +50,88 @@ colors:
     background-image: "assets/your/dark/bg.png"
 
 message:
-  # NOTE: The following 2 may be incorrect
   title: "Welcome to Homer!"
-  content: "This is a dashboard for your favourite web services."
-
+  content: "This is a dashboard for my favourite web services."
   style: "is-info"
-  icon: "logo.png"
 
 links:
   - name: "YouTube"
     icon: "fab fa-youtube"
     url: "https://youtube.co.uk"
-    target: "_blank"
   - name: "GitHub"
     icon: "fab fa-github"
     url: "https://github.com/alex8obrien"
-    target: "_blank"
+  - name: "iCloud"
+    icon: "fab fa-apple"
+    url: "https://icloud.com"
+  - name: "E-Mail"
+    icon: "fas fa-envelope"
+    url: "https://mail.google.com"
+  
 
 services:
-  - name: "Servers"
+  - name: "Networking"
     logo: "fas fa-server"
     items:
-      - name: "WEB TEST"
-        icon: "fas fa-browser"
-        url: "http://www.alex8obrien.com"
-        target: "_blank"
+      - name: "Website"
+        icon: "fas fa-globe"
+        url: "https://www.alex8obrien.com"
       - name: "TrueNAS"
-        icon: "fas fa-server"
-        url: "http://nas.local"
-        target: "_blank"
-  - name: "Services"
-    logo: "fal gears"
-    items:
-      - name: "Uptime Kuma"
-        logo: "icons/uptime-kuma.png"
-        url: "http://uptime.local"
-        target: "_blank"
+        logo: "assets/icons/truenas.png"
+        url: "http://nas.alex8obrien.com"
+      - name: "Nginx"
+        logo: "assets/icons/nginx.png"
+        url: "https://nginx.alex8obrien.com"
       - name: "Pi-hole"
-        logo: "icons/pihole.png"
-        url: "http://pihole.local"
-        target: "_blank"
+        logo: "assets/icons/pihole.png"
+        url: "https://pihole.alex8obrien.com"
+        type: "PiHole"
+        apikey: "API_KEY_HERE"
+  - name: "Services"
+    logo: "fas fa-gears"
+    items:
+      - name: "Home Assistant"
+        logo: "assets/icons/homeassistant.png"
+        url: "https://home.alex8obrien.com"
+      - name: "Uptime Kuma"
+        logo: "assets/icons/uptime-kuma.png"
+        url: "https://uptime.alex8obrien.com"
+        slug: "main"
+        type: "UptimeKuma"
+      - name: "qBittorrent"
+        logo: "assets/icons/qbittorrent.png"
+        url: "https://qbittorrent.alex8obrien.com"
+        type: "qBittorrent"
+        rateInterval: 2000
+        torrentInterval: 5000
+      - name: "Prometheus"
+        type: Prometheus
+        logo: "assets/tools/prometheus.png"
+        url: "https://data.alex8obrien.com"
+        subtitle: "Data monitoring server"
   - name: "Media"
     logo: "fas fa-film"
       items:
         - name: "Jellyfin"
-        logo: "icons/jellyfin.png"
-        url: "http://jellyfin.local"
-        target: "_blank"
+          logo: "assets/icons/jellyfin.png"
+          url: "https://jellyfin.alex8obrien.com"
         - name: "Sonarr"
-        logo: "icons/sonarr.png"
-        url: "http://sonarr.local"
-        target: "_blank"
+          logo: "assets/icons/sonarr.png"
+          url: "http://sonarr.alex8obrien.com"
+          type: "Sonarr"
+          apikey: "API_KEY_HERE"
+        - name: "Radarr"
+          logo: "assets/icons/radarr.png"
+          url: "http://radarr.alex8obrien.com"
+          type: "Radarr"
+          apikey: "API_KEY_HERE"
+        - name: "Readarr"
+          logo: "assets/icons/readarr.png"
+          url: "http://readarr.alex8obrien.com"
+          type: "Readarr"
+          apikey: "API_KEY_HERE"
+        - name: "Prowlarr"
+          logo: "assets/icons/prowlarr.png"
+          url: "http://prowlarr.alex8obrien.com"
+          type: "Prowlarr"
+          apikey: "API_KEY_HERE"
