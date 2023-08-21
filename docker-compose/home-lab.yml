@@ -11,17 +11,55 @@ services:
     volumes:
       - /path/to/data:/config
       - /path/to/movies:/movies # optional
-      - /path/to/downloadclient-downloads:/downloads # optional
+      - /path/to/downloadclient-downloads:/radarr # optional
     ports:
       - 7878:7878
+    restart: unless-stopped
+  readarr:
+    image: lscr.io/linuxserver/readarr:latest
+    container_name: readarr
+    environment:
+      - PUID=1000
+      - GUID=1000
+      - TZ=Europe/London
+    volumes:
+      - /path/to/data:/config
+      - /path/to/books:/books # optional
+      - /path/to/downloadclient-downloads:/readarr # optional
+    ports:
+      - 8787:8787
+    restart: unless-stopped
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - GUID=1000
+      - TZ=Europe/London
+    volumes:
+      - /path/to/data:/config
+      - /path/to/tvseries:/tv # optional
+      - /path/to/downloadclient-downloads:/sonarr # optional
+    ports:
+      - 8989:8989
+    restart: unless-stopped
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:latest
+    container_name: prowlarr
+    environment:
+      - PUID=1000
+      - GUID=1000
+      - TZ=Europe/London
+    volumes:
+      - /path/to/data:/config
+    ports:
+      - 9696:9696
     restart: unless-stopped
 
 
 # Services to add:
-# prowlarr
 # uptime-kuma
 # wireguard
 # nginxproxymanager
 # homer
 # jellyfin
-# sonarr
