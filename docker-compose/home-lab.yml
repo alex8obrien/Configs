@@ -55,11 +55,36 @@ services:
     ports:
       - 9696:9696
     restart: unless-stopped
+  homer:
+    image: b4bz/homer
+    container_name: homer
+    volumes:
+      - /your/local/assets/:/www/assets
+    ports:
+      - 8246:8246
+    user: 1000:1000 # default
+    environment:
+      - INIT_ASSETS=1 # default
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - /path/to/library:/config
+      - /path/to/tvseries:/data/tvshows
+      - /path/to/movies:/data/movies
+      - /path/to/music:/data/music
+    ports:
+      - 8096:8096
+      - 7359:7359/udp #optional
+      - 1900:1900/udp #optional
+    restart: unless-stopped
 
 
 # Services to add:
 # uptime-kuma
 # wireguard
 # nginxproxymanager
-# homer
-# jellyfin
