@@ -107,7 +107,36 @@ services:
     image: containrrr/watchtower
     volumes:
       -  /var/run/docker.sock:/var/run/docker.sock
+  actual-server:
+    image: actualbudget/actual-server:latest
+    ports:
+      - '5006:5006'
+    volumes:
+      # Change './actual-data' below to the path to the folder you want Actual to store its data in on your server.
+      # '/data' is the path Actual will look for its files in by default, so leave that as-is.
+      - /home/alex/docker/actual:/data
+    restart: unless-stopped
+  ntfy:
+    image: binwiederhier/ntfy
+    container_name: ntfy
+    command:
+      - serve
+    environment:
+      - TZ=Europe/London
+    volumes:
+      - /var/cache/ntfy:/var/cache/ntfy
+      - /etc/ntfy:/etc/ntfy
+    ports:
+      - 80:80 # Change port in /etc/ntfy/server.yml
+    healthcheck: # optional: remember to adapt the host:port to your environment
+        test: ["CMD-SHELL", "wget -q --tries=1 http://localhost:80/v1/health -O - | grep -Eo '\"healthy\"\\s*:\\s*true' || exit 1"]
+        interval: 60s
+        timeout: 10s
+        retries: 3
+        start_period: 40s
+    restart: unless-stopped
 
+    
 # Services to add:
 
 # wireguard
