@@ -9,9 +9,9 @@ services:
       - GUID=1000
       - TZ=Europe/London
     volumes:
-      - /path/to/data:/config
-      - /path/to/movies:/movies # optional
-      - /path/to/downloadclient-downloads:/radarr # optional
+      - /srv/data/radarr:/config
+      - /srv/media/movies:/movies
+      - /srv/staging/movies:/movies
     ports:
       - 7878:7878
     restart: unless-stopped
@@ -23,9 +23,9 @@ services:
       - GUID=1000
       - TZ=Europe/London
     volumes:
-      - /path/to/data:/config
-      - /path/to/books:/books # optional
-      - /path/to/downloadclient-downloads:/readarr # optional
+      - /srv/data/readarr:/config
+      - /srv/media/books:/books
+      - /srv/staging/books:/books
     ports:
       - 8787:8787
     restart: unless-stopped
@@ -37,9 +37,9 @@ services:
       - GUID=1000
       - TZ=Europe/London
     volumes:
-      - /path/to/data:/config
-      - /path/to/tvseries:/tv # optional
-      - /path/to/downloadclient-downloads:/sonarr # optional
+      - /srv/data/sonarr:/config
+      - /srv/media/tv:/tv
+      - /srv/staging/tv:/tv
     ports:
       - 8989:8989
     restart: unless-stopped
@@ -51,7 +51,7 @@ services:
       - GUID=1000
       - TZ=Europe/London
     volumes:
-      - /path/to/data:/config
+      - /srv/data/prowlarr:/config
     ports:
       - 9696:9696
     restart: unless-stopped
@@ -59,12 +59,12 @@ services:
     image: b4bz/homer
     container_name: homer
     volumes:
-      - /your/local/assets/:/www/assets
+      - /srv/data/homer/assets:/www/assets
     ports:
       - 8246:8246
-    user: 1000:1000 # default
+    user: 1000:1000
     environment:
-      - INIT_ASSETS=1 # default
+      - INIT_ASSETS=1
   jellyfin:
     image: lscr.io/linuxserver/jellyfin:latest
     container_name: jellyfin
@@ -73,20 +73,21 @@ services:
       - PGID=1000
       - TZ=Europe/London
     volumes:
-      - /path/to/library:/config
-      - /path/to/tvseries:/data/tvshows
-      - /path/to/movies:/data/movies
-      - /path/to/music:/data/music
+      - /srv/data/jellyfin:/config
+      - /srv/media/tv:/tv
+      - /srv/media/movies:/movies
+      - /srv/media/music:/music
+      - /srv/media/books:/books
     ports:
       - 8096:8096
-      - 7359:7359/udp #optional
-      - 1900:1900/udp #optional
+      - 7359:7359/udp
+      - 1900:1900/udp
     restart: unless-stopped
   uptime-kuma:
     image: louislam/uptime-kuma:1
     container_name: uptime-kuma
     volumes:
-      - /path/to/uptime-kuma:/app/data
+      - /srv/data/uptime-kuma:/app/data
     ports:
       - 3001:3001
     restart: always
@@ -101,8 +102,8 @@ services:
       # Uncomment this if IPv6 is not enabled on your host
       DISABLE_IPV6: 'true'
     volumes:
-      - ./data:/data
-      - ./letsencrypt:/etc/letsencrypt
+      - /srv/data/nginxreverseproxy:/data
+      - /srv/data/nginxreverseproxy:/etc/letsencrypt
   watchtower:
     image: containrrr/watchtower
     volumes:
@@ -112,9 +113,7 @@ services:
     ports:
       - '5006:5006'
     volumes:
-      # Change './actual-data' below to the path to the folder you want Actual to store its data in on your server.
-      # '/data' is the path Actual will look for its files in by default, so leave that as-is.
-      - /home/alex/docker/actual:/data
+      - /srv/data/actual:/data
     restart: unless-stopped
   ntfy:
     image: binwiederhier/ntfy
@@ -139,7 +138,6 @@ services:
     
 # Services to add:
 
-# wireguard
 # qBittorrent
 # grafana
 # prometheus
