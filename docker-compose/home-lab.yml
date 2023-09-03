@@ -16,7 +16,7 @@ services:
       - 7878:7878
     restart: unless-stopped
   readarr:
-    image: lscr.io/linuxserver/readarr:latest
+    image: lscr.io/linuxserver/readarr:develop
     container_name: readarr
     environment:
       - PUID=1000
@@ -84,7 +84,7 @@ services:
       - 1900:1900/udp
     restart: unless-stopped
   uptime-kuma:
-    image: louislam/uptime-kuma:2
+    image: louislam/uptime-kuma:latest
     container_name: uptime-kuma
     volumes:
       - /srv/data/uptime-kuma:/app/data
@@ -92,12 +92,12 @@ services:
       - 3001:3001
     restart: unless-stopped
   nginxproxymanager:
-    image: 'jc21/nginx-proxy-manager:latest'
+    image: jc21/nginx-proxy-manager:latest
     restart: unless-stopped
     ports:
-      - '80:80' # Public HTTP Port
-      - '443:443' # Public HTTPS Port
-      - '81:81' # Admin Web Port
+      - 80:80 # Public HTTP Port
+      - 443:443 # Public HTTPS Port
+      - 81:81 # Admin Web Port
     environment:
       # Uncomment this if IPv6 is not enabled on your host
       DISABLE_IPV6: 'true'
