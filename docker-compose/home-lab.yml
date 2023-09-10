@@ -106,6 +106,7 @@ services:
       - /srv/data/nginxreverseproxy:/etc/letsencrypt
   watchtower:
     image: containrrr/watchtower
+    container_name: watchtower
     volumes:
       -  /var/run/docker.sock:/var/run/docker.sock
   actual-server:
@@ -134,6 +135,11 @@ services:
         retries: 3
         start_period: 40s
     restart: unless-stopped
+  
+
+
+
+
 
     
 # Services to add:
