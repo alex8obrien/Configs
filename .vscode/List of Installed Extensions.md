@@ -1,20 +1,20 @@
 # Extensions
 
+- .NET Runtime Install Tool
 - Arduino
+- Astro
 - C/C++
-- C/C++ Extension Pack
-- C/C++ Themes
 - C#
-- CMake
-- CMake Tools
-- Data Workspace
+- C# XML Documentation
 - Discord Presence
-- Excel Viewer
+- DotEnv
+- Git History
 - GitHub Copilot
+- GutHub Copilot Chat
 - GitHub Markdown Preview
-- GitHub Pull Requests and Issues
 - GitHub Repositories
 - Isort
+- LaTeX Workshop
 - Markdown Checkboxes
 - Markdown Emoji
 - Markdown Footnotes
@@ -28,8 +28,5 @@
 - Remote Repositories
 - Serial Monitor
 - Spell Right
-- SQL Bindings
-- SQL Database Projects
 - Text Tables
-- TODO Highlight
-- VSCode-PDF
+- Todo Tree

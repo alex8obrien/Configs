@@ -1,58 +1,162 @@
 {
+    "arduino.commandPath": "arduino-cli.exe",
+    "arduino.path": "C:\\Users\\alex8\\Downloads\\Apps\\arduino-cli_0.33.0_Windows_64bit",
     "arduino.useArduinoCli": true,
-    "arduino.path": "C:\\Program Files\\Arduino",
-    "discord.detailsIdling": "Idling",
-    "discord.largeImageIdling": "Idling",
-    "discord.lowerDetailsIdling": "Idling",
+
+    "C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\g++.exe",
+    "C_Cpp.errorSquiggles": "enabled",
+    "C_Cpp.intelliSenseEngine": "default",
+
+    "discord.detailsIdling": "",
+    "discord.largeImageIdling": "Merge my PR",
+    "discord.lowerDetailsIdling": "Merge my PR",
     "discord.suppressNotifications": true,
+
+    "editor.accessibilitySupport": "off",
+    "editor.inlineSuggest.enabled": true,
+    "editor.tokenColorCustomizations": {
+        "textMateRules": []
+    },
+    "editor.wordWrap": "on",
+
+    "explorer.confirmDelete": false,
+
+    "files.associations": {
+        ".env*": "dotenv"
+    },
+    "files.exclude": {
+        "**/.git": false,
+        "**/*.aux": true
+    },
+
     "git.confirmSync": false,
-    "git.enableSmartCommit": true,
     "git.enableCommitSigning": true,
+    "git.enableSmartCommit": true,
+    "git.openRepositoryInParentFolders": "never",
+
     "github.gitProtocol": "ssh",
     "github.copilot.enable": {
         "*": true,
         "plaintext": false,
         "markdown": false,
-        "scminput": false,
         "latex": false
     },
-    "githubPullRequests.createOnPublishBranch": "never",
-    "editor.inlineSuggest.enabled": true,
-    "editor.accessibilitySupport": "off",
-    "editor.wordWrap": "off",
-    "explorer.confirmDelete": false,
+
+    "latex-workshop.bibtex-format.tab": "4",
+    "latex-workshop.intellisense.citation.format": [
+        "author",
+        "title",
+        "year",
+        "howpublished",
+        "keywords"
+    ],
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
+    "latex-workshop.latex.build.forceRecipeUsage": false,
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "Short Build",
+            "tools": [
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "Full Build",
+            "tools": [
+                "xelatex",
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "--shell-escape",
+                "%DOC%.tex"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%.aux"
+            ],
+            "env": {}
+        }
+    ],
+    "latex-workshop.linting.run": "onType",
+    "latex-workshop.synctex.afterBuild.enabled": true,
+
     "[python]": {
         "editor.formatOnType": true
     },
-    "spellright.language": [
-        "en"
-    ],
+
     "spellright.documentTypes": [
+        "astro",
         "markdown",
         "latex",
         "plaintext"
     ],
-    "terminal.integrated.cursorStyle": "line",
-        "todohighlight.include": [
-        "**/*.cs",
-        "**/*.js",
-        "**/*.jsx",
-        "**/*.ts",
-        "**/*.tsx",
-        "**/*.html",
-        "**/*.php",
-        "**/*.css",
-        "**/*.scss"
+    "spellright.language": [
+        "en"
     ],
-    "todohighlight.defaultStyle": {
-        "color": "#2AAFD4",
-        "backgroundColor": "editor.background",
-        "overviewRulerColor": "editor.background",
-        "isWholeLine": false
+    "spellright.notificationClass": "warning",
+
+    "terminal.integrated.cursorStyle": "line",
+
+    "todo-tree.general.showActivityBarBadge": true,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "TEST",
+        "NOTE",
+        "FIX"
+    ],
+    "todo-tree.highlights.backgroundColourScheme": [
+        "editor.background",
+    ],
+    "todo-tree.highlights.customHighlight": {
+        "BUG": {
+            "icon": "bug",
+            "iconColour": "#FFC107"
+        },
+        "HACK": {
+            "icon": "tools",
+            "iconColour": "#BF8700"
+        },
+        "FIXME": {
+            "icon": "flame",
+            "iconColour": "#D1001C"
+        },
+        "TODO": {
+            "iconColour": "#2DA44E"
+        },
+        "TEST": {
+            "icon": "beaker",
+            "iconColour": "#8250DF"
+        },
+        "NOTE": {
+            "icon": "note"
+        }
     },
-    "todohighlight.keywordsPattern": "(?<=\\W|^)(?<TAG>BUG:|TODO:|FIX:|NOTE:|HACK:)(\\W|$)(.*)",
-    "workbench.editorAssociations": {
-        "*.pdf": "pdf.preview"
-    },    
+
+    "todo-tree.highlights.defaultHighlight": {
+        "foreground": "#2AAFD4",
+        "type": "text-and-comment"
+    },
+    "todo-tree.regex.regex": "((\\s|^)($TAGS))",
+
     "workbench.colorTheme": "Default Dark+",
 }
