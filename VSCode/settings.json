@@ -36,10 +36,12 @@
 
     "github.gitProtocol": "ssh",
     "github.copilot.enable": {
-        "*": true,
+        "*": false,
         "plaintext": false,
         "markdown": false,
-        "latex": false
+        "scminput": false,
+        "latex": false,
+        "python": false
     },
 
     "latex-workshop.bibtex-format.tab": "4",
@@ -48,7 +50,8 @@
         "title",
         "year",
         "howpublished",
-        "keywords"
+        "keywords",
+        "organization"
     ],
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
@@ -105,12 +108,15 @@
         "astro",
         "markdown",
         "latex",
-        "plaintext"
+        "plaintext",
+        "xml"
     ],
     "spellright.language": [
         "en"
     ],
     "spellright.notificationClass": "warning",
+    
+    "redhat.telemetry.enabled": false,
 
     "terminal.integrated.cursorStyle": "line",
 
@@ -156,7 +162,13 @@
         "foreground": "#2AAFD4",
         "type": "text-and-comment"
     },
-    "todo-tree.regex.regex": "((\\s|^)($TAGS))",
-
+    "todo-tree.regex.regex": "((\\s|^)($TAGS))",   
+    
+    "latex-workshop.view.pdf.zoom": "page-actual",
+    //"todo-tree.highlights.useColourScheme": true,
+    "todo-tree.filtering.excludeGlobs": [
+        "**/node_modules/*/**",
+        "**/*.md"
+    ],
     "workbench.colorTheme": "Default Dark+",
 }

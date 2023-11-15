@@ -9,10 +9,12 @@
 - Discord Presence
 - DotEnv
 - Git History
+- GitHub Actions
 - GitHub Copilot
 - GutHub Copilot Chat
 - GitHub Markdown Preview
 - GitHub Repositories
+- IntelliCode for C# Dev Kit
 - Isort
 - LaTeX Workshop
 - Markdown Checkboxes
@@ -30,3 +32,4 @@
 - Spell Right
 - Text Tables
 - Todo Tree
+- XML
