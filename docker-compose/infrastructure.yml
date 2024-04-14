@@ -2,23 +2,23 @@
 version: "3"
 services:
   nginxproxymanager:
-      image: jc21/nginx-proxy-manager:latest
-      restart: unless-stopped
-      ports:
-        - 80:80 # Public HTTP Port
-        - 443:443 # Public HTTPS Port
-        - 81:81 # Admin Web Port
-      environment:
-        # Uncomment this if IPv6 is not enabled on your host
-        DISABLE_IPV6: 'true'
-      volumes:
-        - /srv/data/nginxreverseproxy:/data
-        - /srv/data/nginxreverseproxy:/etc/letsencrypt
-    watchtower:
-      image: containrrr/watchtower
-      container_name: watchtower
-      volumes:
-        -  /var/run/docker.sock:/var/run/docker.sock
+    image: jc21/nginx-proxy-manager:latest
+    restart: unless-stopped
+    ports:
+      - 80:80 # Public HTTP Port
+      - 443:443 # Public HTTPS Port
+      - 81:81 # Admin Web Port
+    environment:
+      # Uncomment this if IPv6 is not enabled on your host
+      DISABLE_IPV6: 'true'
+    volumes:
+      - /srv/data/nginxreverseproxy:/data
+      - /srv/data/nginxreverseproxy:/etc/letsencrypt
+  watchtower:
+    image: containrrr/watchtower
+    container_name: watchtower
+    volumes:
+      -  /var/run/docker.sock:/var/run/docker.sock
   uptime-kuma:
     image: louislam/uptime-kuma:latest
     container_name: uptime-kuma
