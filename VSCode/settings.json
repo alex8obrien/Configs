@@ -1,23 +1,14 @@
 {
-    "arduino.commandPath": "arduino-cli.exe",
-    "arduino.path": "C:\\Users\\alex8\\Downloads\\Apps\\arduino-cli_0.33.0_Windows_64bit",
-    "arduino.useArduinoCli": true,
-
     "C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\g++.exe",
     "C_Cpp.errorSquiggles": "enabled",
     "C_Cpp.intelliSenseEngine": "default",
 
-    "discord.detailsIdling": "",
-    "discord.largeImageIdling": "Merge my PR",
-    "discord.lowerDetailsIdling": "Merge my PR",
-    "discord.suppressNotifications": true,
-
+    "editor.indentSize": "tabSize",
     "editor.accessibilitySupport": "off",
     "editor.inlineSuggest.enabled": true,
     "editor.tokenColorCustomizations": {
         "textMateRules": []
     },
-    "editor.wordWrap": "on",
 
     "explorer.confirmDelete": false,
 
@@ -36,12 +27,8 @@
 
     "github.gitProtocol": "ssh",
     "github.copilot.enable": {
-        "*": false,
-        "plaintext": false,
-        "markdown": false,
-        "scminput": false,
-        "latex": false,
-        "python": false
+        "*": true,
+        "latex": false
     },
 
     "latex-workshop.bibtex-format.tab": "4",
@@ -51,7 +38,8 @@
         "year",
         "howpublished",
         "keywords",
-        "organization"
+        "address",
+        "publisher"
     ],
     "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
@@ -73,7 +61,7 @@
                 "xelatex",
                 "xelatex"
             ]
-        },
+        }
     ],
     "latex-workshop.latex.tools": [
         {
@@ -123,27 +111,26 @@
     "todo-tree.general.showActivityBarBadge": true,
     "todo-tree.general.tags": [
         "BUG",
-        "HACK",
         "FIXME",
+        "FIX",
         "TODO",
         "TEST",
-        "NOTE",
-        "FIX"
+        "NOTE"
     ],
     "todo-tree.highlights.backgroundColourScheme": [
-        "editor.background",
+        "editor.background"
     ],
     "todo-tree.highlights.customHighlight": {
         "BUG": {
             "icon": "bug",
             "iconColour": "#FFC107"
         },
-        "HACK": {
-            "icon": "tools",
-            "iconColour": "#BF8700"
-        },
         "FIXME": {
-            "icon": "flame",
+            "icon": "tools",
+            "iconColour": "#D1001C"
+        },
+        "FIX": {
+            "icon": "tools",
             "iconColour": "#D1001C"
         },
         "TODO": {
@@ -157,18 +144,57 @@
             "icon": "note"
         }
     },
-
     "todo-tree.highlights.defaultHighlight": {
         "foreground": "#2AAFD4",
         "type": "text-and-comment"
     },
-    "todo-tree.regex.regex": "((\\s|^)($TAGS))",   
-    
-    "latex-workshop.view.pdf.zoom": "page-actual",
-    //"todo-tree.highlights.useColourScheme": true,
+    "todo-tree.regex.regex": "((\\s|^)($TAGS):)",
     "todo-tree.filtering.excludeGlobs": [
         "**/node_modules/*/**",
         "**/*.md"
     ],
+    
+    "latex-workshop.view.pdf.zoom": "page-actual",
+
     "workbench.colorTheme": "Default Dark+",
+    "markdownlint.config": {
+        "MD024": false,
+        "MD033": false
+    },
+    
+    "vscord.app.name": "Visual Studio Code",
+    "vscord.behaviour.suppressNotifications": true,
+    "workbench.editorAssociations": {
+        "*.dat": "default"
+    },
+    "gitlens.ai.experimental.provider": "openai",
+    "gitlens.ai.experimental.openai.model": "gpt-4-1106-preview",
+    "python.createEnvironment.trigger": "off",
+    "cmake.showOptionsMovedNotification": false,
+    "cmake.configureOnOpen": true,
+    "cmake.additionalCompilerSearchDirs": [
+        "C:/msys64/mingw32/bin",
+        "C:/msys64/clang32/bin",
+        "C:/msys64/clang64/bin",
+        "C:/msys64/clangarm64/bin",
+        "C:/msys64/ucrt64/bin"
+    ],
+    "telemetry.telemetryLevel": "off",
+    "dotnetAcquisitionExtension.enableTelemetry": false,
+    "gitlens.telemetry.enabled": false,
+    "window.newWindowDimensions": "maximized",
+    "security.promptForLocalFileProtocolHandling": false,
+    "githubPullRequests.createOnPublishBranch": "never",
+    "vscord.status.state.text.editing": "Working on {file_name}{file_extension}",
+    "workbench.iconTheme": "material-icon-theme",
+    "todo-tree.tree.labelFormat": "${tag}${after}",
+    "todo-tree.tree.tooltipFormat": "${filename}, line ${line}",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "editor.stickyScroll.enabled": false,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "vscord.status.problems.countedSeverities": [
+        "error"
+    ],
+    "svelte.enable-ts-plugin": true,
+    "go.toolsManagement.autoUpdate": true
 }
