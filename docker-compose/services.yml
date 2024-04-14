@@ -1,0 +1,20 @@
+---
+version: "3"
+services:
+  homer:
+    image: b4bz/homer
+    container_name: homer
+    volumes:
+      - /srv/data/homer/assets:/www/assets
+    ports:
+      - 8246:8246
+    user: 1000:1000
+    environment:
+      - INIT_ASSETS=1
+  actual-server:
+    image: actualbudget/actual-server:latest
+    ports:
+      - '5006:5006'
+    volumes:
+      - /srv/data/actual:/data
+    restart: unless-stopped

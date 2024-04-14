@@ -1,0 +1,75 @@
+---
+version: "3"
+services:
+  radarr:
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    environment:
+      - PUID=1000
+      - GUID=1000
+      - TZ=Europe/London
+    volumes:
+      - /srv/data/radarr:/config
+      - /srv/media/movies:/movies
+      - /srv/staging/movies:/movies
+    ports:
+      - 7878:7878
+    restart: unless-stopped
+  readarr:
+    image: lscr.io/linuxserver/readarr:develop
+    container_name: readarr
+    environment:
+      - PUID=1000
+      - GUID=1000
+      - TZ=Europe/London
+    volumes:
+      - /srv/data/readarr:/config
+      - /srv/media/books:/books
+      - /srv/staging/books:/books
+    ports:
+      - 8787:8787
+    restart: unless-stopped
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    environment:
+      - PUID=1000
+      - GUID=1000
+      - TZ=Europe/London
+    volumes:
+      - /srv/data/sonarr:/config
+      - /srv/media/tv:/tv
+      - /srv/staging/tv:/tv
+    ports:
+      - 8989:8989
+    restart: unless-stopped
+  prowlarr:
+    image: lscr.io/linuxserver/prowlarr:latest
+    container_name: prowlarr
+    environment:
+      - PUID=1000
+      - GUID=1000
+      - TZ=Europe/London
+    volumes:
+      - /srv/data/prowlarr:/config
+    ports:
+      - 9696:9696
+    restart: unless-stopped
+  jellyfin:
+    image: lscr.io/linuxserver/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+    volumes:
+      - /srv/data/jellyfin:/config
+      - /srv/media/tv:/tv
+      - /srv/media/movies:/movies
+      - /srv/media/music:/music
+      - /srv/media/books:/books
+    ports:
+      - 8096:8096
+      - 7359:7359/udp
+      - 1900:1900/udp
+    restart: unless-stopped
