@@ -19,5 +19,3 @@ All are free to use and if you have any suggestions please create an issue reque
 - [Infrastructure](docker-compose/infrastructure.yml)
 - [Media](docker-compose/media.yml)
 - [Services](docker-compose/services.yml)
-
-  - This is a docker-compose file used for my home lab to ensure that all my containers run on the same docker network.
