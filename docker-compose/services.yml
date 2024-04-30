@@ -1,20 +1,29 @@
----
-version: "3"
+name: services
 services:
   homer:
     image: b4bz/homer
     container_name: homer
-    volumes:
-      - /srv/data/homer/assets:/www/assets
     ports:
-      - 8246:8246
-    user: 1000:1000
+      - 8080:8080
+    volumes:
+      - /srv/data/homer:/www/assets
     environment:
-      - INIT_ASSETS=1
+      - INIT_ASSETS: 1
+      - IPV6_DISABLE: 1
+    restart: unless-stopped
   actual-server:
     image: actualbudget/actual-server:latest
+    container_name: actual
     ports:
       - '5006:5006'
     volumes:
       - /srv/data/actual:/data
+    restart: unless-stopped
+  vaultwarden:
+    image: vaultwarden/server:latest
+    container_name: vaultwarden
+    ports:
+      - 83:80
+    volumes:
+      - /srv/data/vaultwarden/:/data/
     restart: unless-stopped
