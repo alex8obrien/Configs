@@ -7,8 +7,8 @@ All are free to use and if you have any suggestions please create an issue reque
 
 ### Visual Studio Code
 
-- [Settings](VSCode/settings.json)
-- [List of Installed Extensions](VSCode/List%20of%20Installed%20Extensions.md)
+- [Settings](.vscode/settings.json)
+- [Default Profile](.vscode/Default.code-profile)
 
 ### Homer Dashboard
 

@@ -1,36 +1,38 @@
 {
+    "[markdown]": {
+        "editor.tabSize": 2
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
     "C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bin\\g++.exe",
     "C_Cpp.errorSquiggles": "enabled",
     "C_Cpp.intelliSenseEngine": "default",
-
-    "editor.indentSize": "tabSize",
+    "dotnetAcquisitionExtension.enableTelemetry": false,
     "editor.accessibilitySupport": "off",
+    "editor.cursorSmoothCaretAnimation": "on",
     "editor.inlineSuggest.enabled": true,
+    "editor.stickyScroll.enabled": false,
+    "editor.tabSize": 4,
     "editor.tokenColorCustomizations": {
         "textMateRules": []
     },
-
     "explorer.confirmDelete": false,
-
     "files.associations": {
         ".env*": "dotenv"
     },
     "files.exclude": {
-        "**/.git": false,
-        "**/*.aux": true
+        "**/*.aux": true,
+        "**/.git": false
     },
-
     "git.confirmSync": false,
     "git.enableCommitSigning": true,
     "git.enableSmartCommit": true,
     "git.openRepositoryInParentFolders": "never",
-
     "github.gitProtocol": "ssh",
-    "github.copilot.enable": {
-        "*": true,
-        "latex": false
-    },
-
+    "githubPullRequests.createOnPublishBranch": "never",
+    "gitlens.telemetry.enabled": false,
+    "go.toolsManagement.autoUpdate": true,
     "latex-workshop.bibtex-format.tab": "4",
     "latex-workshop.intellisense.citation.format": [
         "author",
@@ -41,8 +43,9 @@
         "address",
         "publisher"
     ],
-    "latex-workshop.latex.autoBuild.run": "never",
     "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
     "latex-workshop.latex.build.forceRecipeUsage": false,
     "latex-workshop.latex.recipes": [
         {
@@ -56,17 +59,14 @@
             "name": "Full Build",
             "tools": [
                 "xelatex",
-                "xelatex",
                 "bibtex",
                 "xelatex",
                 "xelatex"
             ]
-        }
+        },
     ],
     "latex-workshop.latex.tools": [
         {
-            "name": "xelatex",
-            "command": "xelatex",
             "args": [
                 "-synctex=1",
                 "-interaction=nonstopmode",
@@ -74,24 +74,27 @@
                 "--shell-escape",
                 "%DOC%.tex"
             ],
-            "env": {}
+            "command": "xelatex",
+            "env": {},
+            "name": "xelatex"
         },
         {
-            "name": "bibtex",
-            "command": "bibtex",
             "args": [
                 "%DOCFILE%.aux"
             ],
-            "env": {}
+            "command": "bibtex",
+            "env": {},
+            "name": "bibtex"
         }
     ],
     "latex-workshop.linting.run": "onType",
     "latex-workshop.synctex.afterBuild.enabled": true,
-
-    "[python]": {
-        "editor.formatOnType": true
+    "latex-workshop.view.pdf.zoom": "page-actual",
+    "markdownlint.config": {
+        "MD024": false,
+        "MD033": false
     },
-
+    "security.promptForLocalFileProtocolHandling": false,
     "spellright.documentTypes": [
         "astro",
         "markdown",
@@ -103,11 +106,12 @@
         "en"
     ],
     "spellright.notificationClass": "warning",
-    
-    "redhat.telemetry.enabled": false,
-
+    "telemetry.telemetryLevel": "off",
     "terminal.integrated.cursorStyle": "line",
-
+    "todo-tree.filtering.excludeGlobs": [
+        "**/node_modules/*/**",
+        "**/*.md"
+    ],
     "todo-tree.general.showActivityBarBadge": true,
     "todo-tree.general.tags": [
         "BUG",
@@ -118,30 +122,30 @@
         "NOTE"
     ],
     "todo-tree.highlights.backgroundColourScheme": [
-        "editor.background"
+        "editor.background",
     ],
     "todo-tree.highlights.customHighlight": {
         "BUG": {
             "icon": "bug",
             "iconColour": "#FFC107"
         },
-        "FIXME": {
-            "icon": "tools",
-            "iconColour": "#D1001C"
-        },
         "FIX": {
             "icon": "tools",
             "iconColour": "#D1001C"
         },
-        "TODO": {
-            "iconColour": "#2DA44E"
+        "FIXME": {
+            "icon": "tools",
+            "iconColour": "#D1001C"
+        },
+        "NOTE": {
+            "icon": "note"
         },
         "TEST": {
             "icon": "beaker",
             "iconColour": "#8250DF"
         },
-        "NOTE": {
-            "icon": "note"
+        "TODO": {
+            "iconColour": "#2DA44E"
         }
     },
     "todo-tree.highlights.defaultHighlight": {
@@ -149,52 +153,18 @@
         "type": "text-and-comment"
     },
     "todo-tree.regex.regex": "((\\s|^)($TAGS):)",
-    "todo-tree.filtering.excludeGlobs": [
-        "**/node_modules/*/**",
-        "**/*.md"
-    ],
-    
-    "latex-workshop.view.pdf.zoom": "page-actual",
-
-    "workbench.colorTheme": "Default Dark+",
-    "markdownlint.config": {
-        "MD024": false,
-        "MD033": false
-    },
-    
-    "vscord.app.name": "Visual Studio Code",
-    "vscord.behaviour.suppressNotifications": true,
-    "workbench.editorAssociations": {
-        "*.dat": "default"
-    },
-    "gitlens.ai.experimental.provider": "openai",
-    "gitlens.ai.experimental.openai.model": "gpt-4-1106-preview",
-    "python.createEnvironment.trigger": "off",
-    "cmake.showOptionsMovedNotification": false,
-    "cmake.configureOnOpen": true,
-    "cmake.additionalCompilerSearchDirs": [
-        "C:/msys64/mingw32/bin",
-        "C:/msys64/clang32/bin",
-        "C:/msys64/clang64/bin",
-        "C:/msys64/clangarm64/bin",
-        "C:/msys64/ucrt64/bin"
-    ],
-    "telemetry.telemetryLevel": "off",
-    "dotnetAcquisitionExtension.enableTelemetry": false,
-    "gitlens.telemetry.enabled": false,
-    "window.newWindowDimensions": "maximized",
-    "security.promptForLocalFileProtocolHandling": false,
-    "githubPullRequests.createOnPublishBranch": "never",
-    "vscord.status.state.text.editing": "Working on {file_name}{file_extension}",
-    "workbench.iconTheme": "material-icon-theme",
     "todo-tree.tree.labelFormat": "${tag}${after}",
     "todo-tree.tree.tooltipFormat": "${filename}, line ${line}",
-    "latex-workshop.latex.autoClean.run": "onBuilt",
-    "editor.stickyScroll.enabled": false,
-    "editor.cursorSmoothCaretAnimation": "on",
+    "vscord.app.name": "Visual Studio Code",
+    "vscord.behaviour.suppressNotifications": true,
     "vscord.status.problems.countedSeverities": [
         "error"
     ],
-    "svelte.enable-ts-plugin": true,
-    "go.toolsManagement.autoUpdate": true
+    "vscord.status.state.text.editing": "Working on {file_name}{file_extension}",
+    "window.newWindowDimensions": "maximized",
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.editorAssociations": {
+        "*.dat": "default"
+    },
+    "workbench.iconTheme": "material-icon-theme"
 }
